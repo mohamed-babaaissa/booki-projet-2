@@ -55,13 +55,83 @@ a {
     font-weight: 500;
     font-size: 18px;
     padding-bottom: 5px;
-    transition: color 0.3s;
+    transition: color 0.3s, border-top 0.3s;
 }
 
 .nav-links a:hover {
     color: #0065FC; 
+    border-top: 2px solid #0065FC;
     text-decoration: none; 
 }
+
+/* Conteneur du formulaire de recherche */
+.search-container {
+    display: flex;
+    justify-content:flex-start;
+    margin:40px 20px 40px 0;
+}
+
+/* Style du formulaire */
+.search-form {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #F2F2F2;
+}
+
+/* Icône de recherche */
+.search-icon {
+    padding: 10px;
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+    
+}
+
+.search-icon i {
+    font-size: 18px;
+    color: #000;
+}
+
+/* Style du champ de texte */
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    
+}
+
+/* Style du bouton de recherche */
+.search-button {
+    padding: 10px 20px;
+    background-color: #0065FC;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    
+}
+
+.search-button:hover {
+    background-color: #004bbd;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 .section-title {
