@@ -60,6 +60,7 @@ a {
     color: #0065FC; 
     border-top: 2px solid #0065FC;
     text-decoration: none; 
+    padding: 5px;
 }
 
 /* Conteneur du formulaire de recherche */
@@ -460,9 +461,93 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    /* Réduire la taille des images dans les cartes */
+    .hebergements-cards img,
+    .populaires-cards img {
+        height: 150px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filter {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hebergements-cards,
+    .populaires-cards,
+    .activities-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .populaires-cards .card {
+        flex-direction: column;
+    }
+
+    .populaires-cards img,
+    .activities-cards img {
+        width: 100%;
+        height: 200px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .activities-cards img {
+        height: 250px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Réduire les marges pour maximiser l'espace de contenu */
+    .main-container {
+        padding: 0 20px;
+    }
+
+    .hebergements-cards .card-title,
+    .populaires-cards .card-title,
+    .activities-cards .card-title {
+        font-size: 16px;
+    }
+
+    .hebergements-cards .card-subtitle,
+    .populaires-cards .card-subtitle {
+        font-size: 14px;
+    }
 }
