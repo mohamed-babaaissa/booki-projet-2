@@ -216,13 +216,13 @@ a {
 }
 
 .hebergements-cards .card-title {
-    font-size: 18px;
+    font-size: 1.125rem; 
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
 .hebergements-cards .card-subtitle {
-    font-size: 16px;
+    font-size: 1rem;
     color: #777;
 }
 /* Ajout du style pour le lien "Afficher plus" */
@@ -281,10 +281,12 @@ a {
 }
 
 .populaires-title {
+    font-size: 1.125rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 .populaires-cards .card {
     background-color: white;
@@ -311,11 +313,13 @@ a {
 }
 
 .populaires-cards .card-title {
+    font-size: 1.125rem; 
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
 .populaires-cards .card-subtitle {
+    font-size: 1rem;
     margin: 0;
 }
 
@@ -326,7 +330,7 @@ a {
 /* Activities */
 .activities {
     width: 100%;
-   
+    padding: 0 30px; 
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -358,11 +362,14 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     display: flex;
     flex-direction: column;
+    width: 100%; /* Assure que la carte utilise toute la largeur de la colonne */
+    box-sizing: border-box; 
 }
 
 .activities-cards img {
     width: 100%;
     height: 400px;
+    
     object-fit: cover;
 }
 
@@ -372,12 +379,16 @@ a {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .activities-cards .card-title {
-    font-size: 18px;
+    font-size: 1.125rem; 
     margin: 0;
     color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Footer */
@@ -426,10 +437,6 @@ footer {
 }
 
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/* Media queries */
-/* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -443,6 +450,7 @@ footer {
         width: 100%;
         margin-top: 50px;
     }
+    
 
     .populaires-cards {
         display: flex;
@@ -454,20 +462,13 @@ footer {
         width: 30%;
     }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
-
     /* Réduire la taille des images dans les cartes */
     .hebergements-cards img,
-    .populaires-cards img {
+    .populaires-cards img, .activities-cards img {
         height: 150px;
     }
-}
+
+    
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -502,17 +503,63 @@ footer {
         gap: 20px;
     }
 
+    .populaires {
+        order: -1; /* Place la section des populaires en premier */
+        
+    }
+
+    .hebergements {
+        order: 0; /* Place la section des hébergements après les populaires */
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row; 
+       gap: 10px;
+    }
+
     .hebergements-cards,
-    .populaires-cards,
     .activities-cards {
         grid-template-columns: 1fr;
         gap: 10px;
     }
 
-    .populaires-cards .card {
-        flex-direction: column;
+    /* Ajouter des contraintes strictes pour les titres et sous-titres */
+    .hebergements-cards .card-title,
+    .populaires-cards .card-title,
+    .activities-cards .card-title {
+        font-size: 1rem;
+        max-height: 2.5rem; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
     }
 
+    .hebergements-cards .card-subtitle,
+    .populaires-cards .card-subtitle,
+    .activities-cards .card-subtitle {
+        font-size: 0.875rem;
+        max-height: 2rem; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Modifier les cartes pour éviter l'expansion */
+    .populaires-cards .card,
+    .hebergements-cards .card,
+    .activities-cards .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 250px;
+        max-height: 300px;
+        padding: 15px;
+        overflow: hidden; 
+        box-sizing: border-box;
+    }
+
+    /* Ajustement des images pour s'adapter à la nouvelle disposition */
     .populaires-cards img,
     .activities-cards img {
         width: 100%;
@@ -540,14 +587,4 @@ footer {
         padding: 0 20px;
     }
 
-    .hebergements-cards .card-title,
-    .populaires-cards .card-title,
-    .activities-cards .card-title {
-        font-size: 16px;
-    }
-
-    .hebergements-cards .card-subtitle,
-    .populaires-cards .card-subtitle {
-        font-size: 14px;
-    }
 }
