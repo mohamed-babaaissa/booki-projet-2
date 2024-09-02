@@ -187,6 +187,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px; 
+    width: 100%;
 }
 
 .hebergements-cards .card {
@@ -197,6 +198,8 @@ a {
     display: flex;
     flex-direction: column;
     padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hebergements-cards img {
@@ -213,17 +216,29 @@ a {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .hebergements-cards .card-title {
-    font-size: 1.125rem; 
-    margin-top: 10px;
-    margin-bottom: 4px;
+    font-size: 1rem;
+    
+    padding-right: 15px; /* Ajoute un padding interne pour créer plus d'espace autour du texte */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Cache tout débordement de texte */
+    text-overflow: ellipsis; 
+    width: auto; /* Utilise la largeur automatique pour éviter les conflits avec le `white-space` */
+    box-sizing: border-box;
 }
 
 .hebergements-cards .card-subtitle {
     font-size: 1rem;
     color: #777;
+    padding-right: 15px; /* Ajoute un padding interne pour créer plus d'espace autour du texte */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Cache tout débordement de texte */
+    text-overflow: ellipsis; 
+    width: auto; /* Utilise la largeur automatique pour éviter les conflits avec le `white-space` */
+    box-sizing: border-box;
 }
 /* Ajout du style pour le lien "Afficher plus" */
 .show-more-container {
@@ -294,6 +309,8 @@ a {
     margin-top: 33px;
     border-radius: 20px;
     padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .populaires-cards img {
@@ -330,11 +347,13 @@ a {
 /* Activities */
 .activities {
     width: 100%;
-    padding: 0 30px; 
+    max-width: 100%;
+     
     border-radius: 20px;
-    padding: 30px;
+    padding: 30px; 
     box-sizing: border-box;
     margin-top: 50px;
+    overflow: hidden;
 }
 
 .activities-title {
@@ -355,6 +374,7 @@ a {
     gap: 20px; 
 }
 
+
 .activities-cards .card {
     background-color: white;
     border-radius: 20px;
@@ -362,13 +382,15 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     display: flex;
     flex-direction: column;
-    width: 100%; /* Assure que la carte utilise toute la largeur de la colonne */
+    justify-content: space-between; /* Assure une distribution équilibrée des éléments */
+    width: 100%; 
+    height: 100%;
     box-sizing: border-box; 
 }
 
 .activities-cards img {
     width: 100%;
-    height: 400px;
+    height: 200px;
     
     object-fit: cover;
 }
@@ -380,15 +402,17 @@ a {
     justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
+    
 }
 
 .activities-cards .card-title {
     font-size: 1.125rem; 
     margin: 0;
-    color: #333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding-right: 15px;
+    color: #333; 
+    max-height: 2.5rem; /* Fixe une hauteur maximale pour les titres */
+    line-height: 1.25rem; 
+    
 }
 
 /* Footer */
@@ -459,7 +483,8 @@ footer {
     }
 
     .populaires-cards a {
-        width: 30%;
+        flex-basis: 30%; /* Chaque carte prend 30% de la largeur du conteneur */
+    flex-grow: 0;
     }
 
     /* Réduire la taille des images dans les cartes */
@@ -467,6 +492,14 @@ footer {
     .populaires-cards img, .activities-cards img {
         height: 150px;
     }
+    .activities-cards .card {
+        width: 100%;
+        min-width: 150px;
+    }
+
+    
+  
+}
 
     
 
