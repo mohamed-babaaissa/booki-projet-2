@@ -1,0 +1,159 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px; 
+ 
+}
+/* Style pour centrer le logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px; 
+}
+
+.logo img{
+  width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 300px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.nav-links a {
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  text-align: center; /* Centre le texte */
+  box-sizing: border-box;
+  transition: color 0.1s, border-bottom 0.2s; 
+}
+
+.nav-links a:hover {
+  color: #0065FC; 
+  border-top: none;
+  border-bottom: 2px solid #0065FC;
+}
+  
+.search-container {
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Crée deux colonnes de même taille */
+  gap: 10px; /* Espacement entre les filtres */
+  margin-left: 10px;
+}
+
+.filter {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.hebergements-and-populaires {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.populaires {
+  order: -1; 
+  
+
+  
+}
+
+.hebergements {
+  order: 0; 
+}
+
+.populaires-cards {
+  display: flex;
+  flex-direction: column; 
+ gap: 10px;
+ height: 100%;
+}
+.hebergements-cards img
+.populaires-cards img {
+  width: 35%;
+  height: 200px;
+  max-width: 180px;
+}
+
+.populaires-cards .card-content {
+  padding-left: 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: calc(100% - 130px);
+}
+
+
+
+
+.hebergements-cards,
+.activities-cards {
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+}
+
+
+.populaires-cards .card-rating {
+  display: flex;
+  align-items: center;
+  margin-top: auto; 
+}
+
+.hebergements-cards .card,
+.activities-cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 250px;
+  max-height: 300px;
+  padding: 15px;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+/* Ajustement des images pour s'adapter à la nouvelle disposition */
+.activities-cards img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+
+
+
+.footer-container {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.footer-column {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Réduire les marges pour maximiser l'espace de contenu */
+.main-container {
+  padding: 0 20px;
+}
+
+
+

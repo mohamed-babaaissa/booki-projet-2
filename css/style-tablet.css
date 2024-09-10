@@ -1,0 +1,42 @@
+.hebergements-and-populaires {
+  flex-direction: column;
+}
+
+.hebergements {
+  width: 100%;
+}
+
+.populaires {
+  width: 100%;
+  margin-top: 50px;
+}
+
+
+
+
+.populaires-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.populaires-cards a {
+  flex-basis: 30%; 
+flex-grow: 0;
+}
+.activities-cards {
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+}
+
+/* Réduire la taille des images dans les cartes */
+.hebergements-cards img,
+.populaires-cards img, .activities-cards img {
+  height: 150px;
+}
+.activities-cards .card {
+  width: 100%;
+ 
+  
+}
