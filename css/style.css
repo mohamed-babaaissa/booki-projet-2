@@ -170,7 +170,7 @@ a {
 }
 
 .filter-info {
-  margin-top: 15px;
+  margin-top: 25px;
   font-size: 14px;
   color: #333;
 }
@@ -236,9 +236,7 @@ a {
   
    
   white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  box-sizing: border-box;
+ 
 }
 
 .hebergements-cards .card-subtitle {
@@ -246,10 +244,7 @@ a {
   color: #777;
   
   white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  
-  box-sizing: border-box;
+
 }
 /* Ajout du style pour le lien "Afficher plus" */
 .show-more-container {
