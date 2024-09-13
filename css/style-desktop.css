@@ -50,15 +50,13 @@ a {
   display: flex;
   align-items: center;
   gap: 30px; 
-  
-  
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333; 
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   padding-bottom: 5px;
   padding-top: 20px;
   height: 60px;
@@ -69,7 +67,6 @@ a {
 .nav-links a:hover {
   color: #0065FC; 
   border-top: 2px solid #0065FC;
- 
 }
 
 /* Conteneur du formulaire de recherche */
@@ -83,16 +80,16 @@ a {
 .search-form {
   display: flex;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   background-color: #F2F2F2;
-  border: 1px solid #ccc;
+  border: 1px solid transparent;
 }
 
 /* Icône de recherche */
 .search-icon {
   padding: 10px;
-  background-color: gainsboro;
+  background-color: var(--filter-bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,6 +124,10 @@ a {
 
 .search-button:hover {
   background-color: #004bbd;
+}
+
+.search-button i{
+  display: none;
 }
 
 /* Section des filtres */
@@ -232,17 +233,13 @@ a {
 }
 
 .hebergements-cards .card-title {
-  font-size: 1rem;
-  
-   
+  font-size: 0.9rem;
   white-space: nowrap; 
- 
 }
 
 .hebergements-cards .card-subtitle {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #777;
-  
   white-space: nowrap; 
 
 }
@@ -259,8 +256,7 @@ a {
   font-size: 16px;
   padding: 10px;
   display: inline-block;
-  border-radius: 5px;
-  
+  border-radius: 5px; 
 }
 
 .show-more-link:hover {
@@ -287,16 +283,10 @@ a {
   flex-grow: 1;
 }
 
-/* Styles pour les étoiles pleines */
-.star-filled {
-  color: #FFD700; 
-}
-
 /* Styles pour l'étoile vide */
 .star-empty {
   color: #ccc; 
 }
-
 
 /*Populaires */
 .populaires {
@@ -315,11 +305,9 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
   height: 100%;
   
 }
-
 
 .populaires-cards .card {
   background-color: white;
@@ -328,7 +316,6 @@ a {
   border-radius: 20px;
   padding: 5px;
   width: 100%;
-  
   box-sizing: border-box;
 }
 
@@ -350,13 +337,13 @@ a {
 }
 
 .populaires-cards .card-title {
-  font-size: 1rem; 
+  font-size: 0.9rem; 
   margin-top: 10px;
   margin-bottom: 4px;
 }
 
 .populaires-cards .card-subtitle {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0;
 }
 
@@ -368,7 +355,6 @@ a {
 .activities {
   width: 100%;
   max-width: 1440px;
-   
   border-radius: 20px;
   padding: 30px; 
   box-sizing: border-box;
@@ -426,17 +412,19 @@ a {
   justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
-  
 }
 
 .activities-cards .card-title {
-  font-size: 1rem; 
+  font-size: 0.9rem; 
   margin: 15px 0;  
   padding-right: 15px;
   color: #333; 
   max-height: 2.5rem; 
-  line-height: 1.25rem; 
-  
+  line-height: 1.25rem;
+}
+
+.activities-cards .ajustement {
+  margin: 10px 0 20px 0;
 }
 
 /* Footer */

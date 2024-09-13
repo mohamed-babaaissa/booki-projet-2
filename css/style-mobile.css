@@ -1,9 +1,16 @@
+.main-container {
+  padding: 0 20px;
+}
+
+/* Header */
 .header-container {
   display: flex;
+  
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-bottom: 10px; 
+   
+  padding:0;
  
 }
 /* Style pour centrer le logo */
@@ -22,10 +29,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  gap: 300px;
+  justify-content: space-between;
   margin-top: 20px;
   width: 100%;
+  border-bottom: 2px solid #F2F2F2;
+}
+
+.nav-links span {
+  padding: 0 50px 15px 50px;
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  gap: 30px;
 }
 
 .nav-links a {
@@ -35,26 +50,49 @@
   padding: 10px 0;
   position: relative;
   width: 100%;
-  text-align: center; /* Centre le texte */
+  text-align: center; 
   box-sizing: border-box;
-  transition: color 0.1s, border-bottom 0.2s; 
+  transition: color 0.3s ease, border-bottom 0.3s ease; 
 }
 
-.nav-links a:hover {
+.nav-links a:hover { 
+  border-top: none;
+  
+}
+
+.nav-links span:hover {
   color: #0065FC; 
   border-top: none;
   border-bottom: 2px solid #0065FC;
 }
-  
+  /* Style du formulaire */
 .search-container {
   flex-direction: column;
   margin: 20px 0;
 }
 
+.search-button .search-text {
+  display: none; 
+}
+
+.search-button i {
+  display: inline;
+  font-size: 20px; 
+}
+
+.search-button {
+  padding: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+}
+
+/* Section des filtres */
 .filters {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Crée deux colonnes de même taille */
-  gap: 10px; /* Espacement entre les filtres */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px; 
   margin-left: 10px;
 }
 
@@ -69,10 +107,8 @@
 }
 
 .populaires {
-  order: -1; 
-  
-
-  
+  order: -1;
+  margin: 0;   
 }
 
 .hebergements {
@@ -82,9 +118,10 @@
 .populaires-cards {
   display: flex;
   flex-direction: column; 
- gap: 10px;
- height: 100%;
+  gap: 10px;
+  height: 100%;
 }
+
 .hebergements-cards img
 .populaires-cards img {
   width: 35%;
@@ -94,22 +131,17 @@
 
 .populaires-cards .card-content {
   padding-left: 15px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-width: calc(100% - 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% - 130px);
 }
-
-
-
 
 .hebergements-cards,
 .activities-cards {
   grid-template-columns: 1fr;
   gap: 20px;
-
 }
-
 
 .populaires-cards .card-rating {
   display: flex;
@@ -125,7 +157,7 @@ width: calc(100% - 130px);
   width: 100%;
   min-height: 250px;
   max-height: 300px;
-  padding: 15px;
+  padding: 5px;
   overflow: hidden; 
   box-sizing: border-box;
 }
@@ -137,7 +169,7 @@ width: calc(100% - 130px);
   border-radius: 20px 20px 0 0;
 }
 
-
+/* footer */
 
 .footer-container {
   flex-direction: column;
@@ -150,10 +182,7 @@ width: calc(100% - 130px);
   margin-bottom: 20px;
 }
 
-/* Réduire les marges pour maximiser l'espace de contenu */
-.main-container {
-  padding: 0 20px;
-}
+
 
 
 

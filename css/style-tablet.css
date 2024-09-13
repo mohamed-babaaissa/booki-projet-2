@@ -11,9 +11,6 @@
   margin-top: 50px;
 }
 
-
-
-
 .populaires-cards {
   display: flex;
   flex-direction: row;
@@ -23,8 +20,9 @@
 
 .populaires-cards a {
   flex-basis: 30%; 
-flex-grow: 0;
+  flex-grow: 0;
 }
+
 .activities-cards {
   grid-template-columns: repeat(4, 1fr); 
   gap: 20px; 
@@ -35,8 +33,7 @@ flex-grow: 0;
 .populaires-cards img, .activities-cards img {
   height: 150px;
 }
+
 .activities-cards .card {
-  width: 100%;
- 
-  
+  width: 100%; 
 }
