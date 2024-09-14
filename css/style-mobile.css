@@ -31,7 +31,7 @@
   margin-top: 20px;
   width: 100%;
   border-bottom: 2px solid #F2F2F2;
-  box-sizing: border-box; /* Inclus padding et border dans la largeur totale */
+  box-sizing: border-box; 
   overflow: hidden;
   gap: 20px;
 }
